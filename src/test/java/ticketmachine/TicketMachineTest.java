@@ -1,7 +1,11 @@
 package ticketmachine;
 
-import static org.junit.jupiter.api.Assertions.*;
-import org.junit.jupiter.api.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 class TicketMachineTest {
     private static final int PRICE = 50; // Une constante
@@ -111,7 +115,7 @@ class TicketMachineTest {
             () -> machine.insertMoney(-10),
             "Insérer un montant négatif devrait lever une exception");
     }
-
+  //test
     @Test
     // S10 : on ne peut pas créer de machine qui délivre des tickets dont le prix est négatif
     void cannotCreateMachineWithNegativePrice() {
